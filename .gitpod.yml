@@ -1,5 +1,8 @@
 image: trustworthysystems/camkes:latest
 
 tasks:
-  - name: addtional python deps for tut
+  - name: Additional python dependencies + Get the code
     before: pip install --user aenum pyelftools sortedcontainers
+    init: |
+      repo init -u https://github.com/seL4/sel4-tutorials-manifest
+      repo sync
