@@ -1,1 +1,5 @@
-image: trustworthysystems/sel4:latest
+image: trustworthysystems/camkes:latest
+
+tasks:
+  - name: addtional python deps for tut
+    before: pip install --user aenum pyelftools sortedcontainers
